@@ -1,6 +1,4 @@
-# Star Type Classification - NASA Stars
-
-Gruppenarbeit im 2. Semester des Data-Science-Kurses.
+# Star Type Classification - NASA Stars Gruppenarbeit
 
 ## Gruppenmitglieder
 
@@ -8,36 +6,40 @@ Gruppenarbeit im 2. Semester des Data-Science-Kurses.
 - Leni Biasi
 - Dana Kando
 
-## Projektbeschreibung
+Wir haben hier mal alles Genau aufgeschrieben...damit wir selber verstehen, was wir da genau machen...
 
-In diesem Projekt wird das **Star Type Classification Dataset** analysiert. Ziel ist es, anhand physikalischer und spektraler Merkmale vorherzusagen, zu welcher Sternklasse ein Objekt gehoert.
+## Projektbeschreibung 
+
+In diesem Projekt wird das nasa_stars dataset analysiert. Unser Ziel ist es, anhand von physikalischen und spektralen Merkmale vorherzusagen, zu welcher Sternklasse ein Objekt gehoert.
 
 Die Zielvariable ist `Type`. Sie beschreibt sechs verschiedene Sternklassen:
 
-| Type | Sternklasse |
-| --- | --- |
-| 0 | Red Dwarf |
-| 1 | Brown Dwarf |
-| 2 | White Dwarf |
-| 3 | Main Sequence |
-| 4 | Super Giants |
-| 5 | Hyper Giants |
+| Type  | Sternklasse |
 
-Das Projekt umfasst das Laden, Explorieren, Bereinigen und Modellieren des Datensatzes. Die finale Machine-Learning-Pipeline befindet sich im Jupyter Notebook.
+| 0     | Red Dwarf |
+| 1     | Brown Dwarf |
+| 2     | White Dwarf |
+| 3     | Main Sequence |
+| 4     | Super Giants |
+| 5     | Hyper Giants |
+
+Was wir in diesem Prjekt machen:
+Laden, Explorieren, Bereinigen und Modellieren des Datensatzes. 
+Die finale Machine-Learning-Pipeline befindet sich dann in unserem Jupyter Notebook: star_type_classification.ipynb 
 
 ## Datensatz
 
-Die Datei `nasa_stars_data.csv` enthaelt 240 Beobachtungen mit folgenden Merkmalen:
+Die Datei "nasa_stars_data.csv" enthaelt 240 Beobachtungen mit folgenden Merkmalen:
 
-| Spalte | Beschreibung |
-| --- | --- |
-| `Temperature` | Oberflaechentemperatur des Sterns in Kelvin |
-| `L` | Relative Leuchtkraft im Vergleich zur Sonne |
-| `R` | Relativer Radius im Vergleich zur Sonne |
-| `A_M` | Absolute Magnitude / intrinsische Helligkeit |
-| `Color` | Beobachtete Farbe des Sterns |
-| `Spectral_Class` | Spektralklasse nach dem Harvard-System |
-| `Type` | Zielvariable fuer die Sternklasse |
+| Spalte            | Beschreibung |
+
+| `Temperature`     | Oberflaechentemperatur des Sterns in Kelvin |
+| `L`               | Relative Leuchtkraft im Vergleich zur Sonne |
+| `R`               | Relativer Radius im Vergleich zur Sonne |
+| `A_M`             | Absolute Magnitude / intrinsische Helligkeit |
+| `Color`           | Beobachtete Farbe des Sterns |
+| `Spectral_Class`  | Spektralklasse nach dem Harvard-System |
+| `Type`            | Zielvariable füer die Sternklasse |
 
 Beim Laden der Datei mussten einige Besonderheiten beruecksichtigt werden:
 
@@ -47,7 +49,7 @@ Beim Laden der Datei mussten einige Besonderheiten beruecksichtigt werden:
 - Es gibt fehlende Werte in mehreren Spalten.
 - Die Spalte `Color` enthaelt uneinheitliche Schreibweisen und einzelne Tippfehler.
 
-Die Originaldatei wurde nicht manuell veraendert. Alle Bereinigungsschritte sind im Notebook nachvollziehbar dokumentiert.
+Die Originaldatei wurde von uns nicht manuell veräendert. Alle Bereinigungsschritte sind im Notebook nachvollziehbar dokumentiert.
 
 ## Machine-Learning-Ansatz
 
@@ -66,7 +68,7 @@ Die Preprocessing-Pipeline umfasst:
 - Skalierung numerischer Variablen
 - One-Hot-Encoding kategorialer Variablen
 
-Anschliessend wurden mehrere Klassifikationsmodelle verglichen, unter anderem:
+Anschliessend haben wir  mehrere Klassifikationsmodelle verglichen, unter anderem:
 
 - Logistic Regression
 - Support Vector Machine
@@ -74,17 +76,20 @@ Anschliessend wurden mehrere Klassifikationsmodelle verglichen, unter anderem:
 
 Die Modellbewertung erfolgt mit Accuracy, Macro F1 Score, Cross Validation, Classification Report und Confusion Matrix.
 
+
 ## Projektdateien
 
-| Datei | Inhalt |
-| --- | --- |
-| `README.md` | Projektbeschreibung und Dokumentation |
-| `nasa_stars_data.csv` | Originaldatensatz |
-| `star_type_classification.ipynb` | Jupyter Notebook mit Analyse, Cleaning, Modellierung und Bericht |
-| `requirements.txt` | Benoetigte Python-Pakete |
-| `GA_Nasa_submission.zip` | ZIP-Datei fuer die Abgabe |
+| Datei                             | Inhalt |
+
+| `README.md`                       | Projektbeschreibung und Dokumentation - da sind wir grade :) |
+| `nasa_stars_data.csv`             | Originaldatensatz |
+| `star_type_classification.ipynb`  | Jupyter Notebook mit Analyse, Cleaning, Modellierung und Bericht |
+| `requirements.txt`                | Benoetigte Python-Pakete |
+| `GA_Nasa_submission.zip`          | ZIP-Datei fuer die Abgabe |
+
 
 ## Installation
+(hier musste uns unser Treuer Teamcollege Chat GPT helfen, da wir nicht mehr wussten was genau man ins Terminal eingeben muss, da haben wir einfach mal reinkopiert, was Chat uns als Anleitung gegeben hat)
 
 Zuerst in den Projektordner wechseln:
 
@@ -98,7 +103,7 @@ Dann die benoetigten Pakete installieren:
 python3 -m pip install -r requirements.txt
 ```
 
-## Notebook starten
+#### Notebook starten
 
 Nach der Installation kann das Notebook mit Jupyter geoeffnet werden:
 
@@ -108,7 +113,7 @@ jupyter notebook
 
 Danach die Datei `star_type_classification.ipynb` auswaehlen und die Zellen der Reihe nach ausfuehren.
 
-## Reproduzierbarkeit
+#### Reproduzierbarkeit
 
 Alle wesentlichen Schritte sind im Notebook dokumentiert:
 
@@ -121,13 +126,10 @@ Alle wesentlichen Schritte sind im Notebook dokumentiert:
 7. Evaluation des finalen Modells
 8. Schriftliche Zusammenfassung und Reflexion
 
-## Einsatz von LLMs
-
-Fuer dieses Projekt wurde ein Large Language Model als Unterstuetzung verwendet. Es wurde genutzt fuer:
-
+## Einsatz von KI
+Füer dieses Projekt wurde Chat GPT als unrerstützung genutzt
 - Strukturierung des Notebooks
 - Formulierung von Dokumentationstexten
 - Entwicklung einer sinnvollen Machine-Learning-Strategie
 - Hinweise zur Datenbereinigung und Pipeline-Struktur
 
-Die finale Verantwortung fuer Code, Ergebnisse und Interpretation liegt bei der Gruppe. Alle Gruppenmitglieder muessen die Arbeitsschritte nachvollziehen und erklaeren koennen.
