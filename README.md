@@ -14,14 +14,14 @@ In diesem Projekt wird das nasa_stars dataset analysiert. Unser Ziel ist es, anh
 
 Die Zielvariable ist `Type`. Sie beschreibt sechs verschiedene Sternklassen:
 
-| Type  | Sternklasse |
-
-| 0     | Red Dwarf |
-| 1     | Brown Dwarf |
-| 2     | White Dwarf |
-| 3     | Main Sequence |
-| 4     | Super Giants |
-| 5     | Hyper Giants |
+| Type | Sternklasse |
+| --- | --- |
+| 0 | Red Dwarf |
+| 1 | Brown Dwarf |
+| 2 | White Dwarf |
+| 3 | Main Sequence |
+| 4 | Super Giants |
+| 5 | Hyper Giants |
 
 Was wir in diesem Prjekt machen:
 Laden, Explorieren, Bereinigen und Modellieren des Datensatzes. 
@@ -31,15 +31,15 @@ Die finale Machine-Learning-Pipeline befindet sich dann in unserem Jupyter Noteb
 
 Die Datei "nasa_stars_data.csv" enthaelt 240 Beobachtungen mit folgenden Merkmalen:
 
-| Spalte            | Beschreibung |
-
-| `Temperature`     | Oberflaechentemperatur des Sterns in Kelvin |
-| `L`               | Relative Leuchtkraft im Vergleich zur Sonne |
-| `R`               | Relativer Radius im Vergleich zur Sonne |
-| `A_M`             | Absolute Magnitude / intrinsische Helligkeit |
-| `Color`           | Beobachtete Farbe des Sterns |
-| `Spectral_Class`  | Spektralklasse nach dem Harvard-System |
-| `Type`            | Zielvariable füer die Sternklasse |
+| Spalte | Beschreibung |
+| --- | --- |
+| `Temperature` | Oberflaechentemperatur des Sterns in Kelvin |
+| `L` | Relative Leuchtkraft im Vergleich zur Sonne |
+| `R` | Relativer Radius im Vergleich zur Sonne |
+| `A_M` | Absolute Magnitude / intrinsische Helligkeit |
+| `Color` | Beobachtete Farbe des Sterns |
+| `Spectral_Class` | Spektralklasse nach dem Harvard-System |
+| `Type` | Zielvariable fuer die Sternklasse |
 
 Beim Laden der Datei mussten einige Besonderheiten beruecksichtigt werden:
 
@@ -79,13 +79,14 @@ Die Modellbewertung erfolgt mit Accuracy, Macro F1 Score, Cross Validation, Clas
 
 ## Projektdateien
 
-| Datei                             | Inhalt |
+| Datei | Inhalt |
+| --- | --- |
+| `README.md` | Projektbeschreibung und Dokumentation |
+| `nasa_stars_data.csv` | Originaldatensatz |
+| `star_type_classification.ipynb` | Jupyter Notebook mit Analyse, Cleaning, Modellierung und Bericht |
+| `requirements.txt` | Benoetigte Python-Pakete |
+| `GA_Nasa_submission.zip` | ZIP-Datei fuer die Abgabe |
 
-| `README.md`                       | Projektbeschreibung und Dokumentation - da sind wir grade :) |
-| `nasa_stars_data.csv`             | Originaldatensatz |
-| `star_type_classification.ipynb`  | Jupyter Notebook mit Analyse, Cleaning, Modellierung und Bericht |
-| `requirements.txt`                | Benoetigte Python-Pakete |
-| `GA_Nasa_submission.zip`          | ZIP-Datei fuer die Abgabe |
 
 
 ## Installation
